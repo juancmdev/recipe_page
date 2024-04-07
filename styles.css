@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background: #f2e5d7;
+  height: 100vh;
+}
+
+.container-main {
+  background: white;
+}
+
+.attribution {
+  display: none;
+}
