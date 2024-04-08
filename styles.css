@@ -1,17 +1,161 @@
+:root {
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+hr {
+  margin-bottom: 24px;
+  border: 0.1px solid rgba(128, 128, 128, 0.1);
+}
+
+article {
+  margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Young Serif", serif;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: rgb(133, 70, 50);
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  color: rgb(133, 70, 50);
+  font-weight: 500;
+}
+
+ul,
+ol {
+  margin: 15px 0px 15px 25px;
+}
+
+ul li {
+  margin-bottom: 5px;
+  text-indent: 13px;
+}
+
+ul:last-of-type {
+  margin: 15px 0px 0px 25px;
+}
+
+p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
 .container {
   background: #f2e5d7;
-  height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px;
 }
 
 .container-main {
   background: white;
+  width: 718px;
+  height: auto;
+  overflow: unset;
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.preparation-time {
+  background: #fff5fa;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.instructions {
+  & li {
+    & p {
+      padding-left: 20px;
+      margin-bottom: 10px;
+
+      & strong {
+        font-weight: 500;
+      }
+    }
+  }
+  & ol li::marker {
+    font-weight: bold;
+    color: rgb(133, 70, 50);
+  }
+}
+
+.nutrition {
+  & .table {
+    & hr {
+      margin: 10px 0;
+    }
+    & .row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      & p {
+        margin: 0;
+      }
+      & p:nth-child(2) {
+        color: rgb(133, 70, 50);
+        font-weight: 600;
+      }
+    }
+  }
 }
 
 .attribution {
   display: none;
+}
+
+@media (max-width: 768px) {
+  img {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  h1 {
+    line-height: 1;
+  }
+
+  .container {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .container-main {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .content {
+    margin: 0 38px;
+  }
 }
